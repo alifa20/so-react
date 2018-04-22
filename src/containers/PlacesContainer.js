@@ -72,15 +72,15 @@ PlacesContainer.propTypes = {
   store: PropTypes.object.isRequired
 };
 
-function mapStateToProps(state, ownProps) {
+const mapStateToProps = (state, ownProps) => {
   return { places: state.places };
-}
+};
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(actions, dispatch)
   };
-}
+};
 
 // export default PlacesContainer;
 export default connect(mapStateToProps, mapDispatchToProps)(PlacesContainer);

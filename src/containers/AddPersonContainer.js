@@ -19,11 +19,11 @@ class AddPersonContainer extends React.Component {
   // };
 }
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(actions, dispatch)
   };
-}
+};
 
 // export default AddPersonContainer;
 export default connect(null, mapDispatchToProps)(AddPersonContainer);

@@ -15,11 +15,11 @@ class AddPlaceContainer extends React.Component {
   };
 }
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(actions, dispatch)
   };
-}
+};
 
 // export default AddPlaceContainer;
 export default connect(null, mapDispatchToProps)(AddPlaceContainer);

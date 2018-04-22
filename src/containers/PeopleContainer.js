@@ -89,15 +89,15 @@ PeopleContainer.propTypes = {
   store: PropTypes.object.isRequired
 };
 
-function mapStateToProps(state, ownProps) {
+const mapStateToProps = (state, ownProps) => {
   return { people: state.people };
-}
+};
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(actions, dispatch)
   };
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(PeopleContainer);
 // connect
